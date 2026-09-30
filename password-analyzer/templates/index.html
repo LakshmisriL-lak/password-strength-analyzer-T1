@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Password Strength Analyzer</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="card">
+    <h1>🔐 Password Strength Analyzer</h1>
+    <p class="sub">Check length, complexity and uniqueness. Analysis runs on the Python backend.</p>
+
+    <div class="row">
+      <input id="pw" type="password" placeholder="Enter password" autocomplete="off">
+      <button id="toggle" type="button">Show</button>
+    </div>
+
+    <div class="track"><div id="bar"></div></div>
+    <div class="meta"><span id="label">—</span><span class="mut" id="entropy">Entropy: 0 bits</span></div>
+
+    <h2>Complexity checklist</h2>
+    <ul id="checks"></ul>
+
+    <h2>Feedback</h2>
+    <ul class="tips" id="tips"><li>Start typing…</li></ul>
+
+    <h2>Stronger alternatives</h2>
+    <div id="sugs"></div>
+
+    <h2>Password history (optional)</h2>
+    <div class="row">
+      <input id="user" type="text" placeholder="Username">
+      <button id="save" type="button">Save</button>
+    </div>
+    <p id="msg" class="mut"></p>
+  </div>
+  <script src="/static/script.js"></script>
+</body>
+</html>
